@@ -1,0 +1,24 @@
+{
+  "name": "voodoo-shop",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build-css": "tailwindcss -i ./styles/index.css -o ./public/index.css --watch",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "prettier": "^3.0.3",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.3.5"
+  }
+}

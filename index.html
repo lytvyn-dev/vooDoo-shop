@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VooDoo Test</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script defer type="module" src="/main.js"></script>
+  </head>
+  <body class="flex flex-col min-h-screen bg-light font-main">
+    <!-- !Header -->
+    <header class="py-[24px] border-b border-black sm:py-[48px]">
+      <div class="mx-auto max-w-[388px] sm:max-w-[1320px] px-[24px]">
+        <div class="flex justify-between">
+          <div
+            class="flex grow gap-[4px] items-start sm:gap-[12px] sm:relative"
+          >
+            <img
+              class="max-w-[23px] sm:max-w-[45px] xl:absolute xl:top-0 xl:left-[-60px]"
+              src="./assets/images/logo.svg"
+              alt="logo image"
+            />
+            <img
+              class="max-w-[107px] sm:max-w-[192px] sm:h-[98px]"
+              src="./assets/images/logo-text.svg"
+              alt="logo image"
+            />
+          </div>
+
+          <div
+            class="flex gap-[1.6rem] items-center sm:gap-[4.8rem] sm:items-start"
+          >
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2 3C2 2.44772 2.44772 2 3 2H5C5.48884 2 5.90603 2.35341 5.98639 2.8356L6.34713 5H21C21.3214 5 21.6233 5.15452 21.8112 5.41529C21.9992 5.67606 22.0503 6.01128 21.9487 6.31623L18.9487 15.3162C18.8126 15.7246 18.4304 16 18 16H7C6.51116 16 6.09397 15.6466 6.01361 15.1644L4.15287 4H3C2.44772 4 2 3.55228 2 3ZM6.68046 7L7.84713 14H17.2792L19.6126 7H6.68046Z"
+                  fill="black"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6 20C6 18.8954 6.89543 18 8 18C9.10457 18 10 18.8954 10 20C10 21.1046 9.10457 22 8 22C6.89543 22 6 21.1046 6 20Z"
+                  fill="black"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15 20C15 18.8954 15.8954 18 17 18C18.1046 18 19 18.8954 19 20C19 21.1046 18.1046 22 17 22C15.8954 22 15 21.1046 15 20Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+            <a
+              class="text-white bg-black inline-block text-[1.2rem] font-bold p-[12px] rounded-[4px] leading-none sm:text-[2rem]"
+              href="#"
+              >Sign-up</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- !Main -->
+    <main class="grow pt-[24px] sm:pt-[100px]">
+      <div
+        class="mx-auto max-w-[388px] sm:max-w-[1320px] px-[24px] pb-[204px] space-y-[60px] sm:space-y-[70px]"
+      >
+        <div class="space-y-[50px]">
+          <div class="h-[40px] rounded w-full bg-black"></div>
+          <div class="sm:flex sm:flex-wrap sm:gap-x-[24px] sm:gap-y-[48px]">
+            <article class="font-bold flex flex-col gap-[12px]">
+              <figure
+                class="border border-black rounded min-h-[300px] sm:min-w-[300px] relative"
+              >
+                <img src="#" alt="ASDA" />
+                <span
+                  class="absolute top-12 left-12 -translate-x-[50%] -translate-y-[50%] uppercase rounded bg-black text-white p-[8px] text-[1.2rem] leading-none"
+                  >used</span
+                >
+              </figure>
+              <div class="flex justify-between">
+                <div>
+                  <p>Product name</p>
+                  <p>000 KR.</p>
+                </div>
+                <div class="text-right">
+                  <p class="font-medium">Condition</p>
+                  <p class="font-normal">Slightly used</p>
+                </div>
+              </div>
+              <button
+                class="uppercase text-white bg-black font-bold py-[16px] rounded leading-none"
+              >
+                Add to cart
+              </button>
+            </article>
+          </div>
+        </div>
+        <ul
+          class="flex text-xl gap-[10px] font-pagination font-light justify-center"
+        >
+          <li
+            class="w-[39px] h-[39px] flex justify-center items-center active:text-white text-black border border-black active:bg-black rounded-full cursor-pointer"
+          >
+            1
+          </li>
+          <li
+            class="w-[39px] h-[39px] flex justify-center items-center active:text-white text-black border border-black active:bg-black rounded-full cursor-pointer"
+          >
+            2
+          </li>
+          <li
+            class="w-[39px] h-[39px] flex justify-center items-center active:text-white text-black border border-black active:bg-black rounded-full cursor-pointer"
+          >
+            3
+          </li>
+          <li
+            class="w-[39px] h-[39px] flex justify-center items-center active:text-white text-black border border-black active:bg-black rounded-full cursor-pointer"
+          >
+            4
+          </li>
+          <li
+            class="w-[39px] h-[39px] flex justify-center items-center active:text-white text-black border border-black active:bg-black rounded-full cursor-pointer"
+          >
+            5
+          </li>
+          <li
+            class="w-[39px] h-[39px] flex justify-center items-center active:text-white text-black border border-black active:bg-black rounded-full cursor-pointer"
+          >
+            ..
+          </li>
+          <li
+            class="w-[39px] h-[39px] flex justify-center items-center active:text-white text-black border border-black active:bg-black rounded-full cursor-pointer"
+          >
+            25
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- !Footer -->
+    <footer
+      class="bg-white py-[48px] text-sm font-bold font-secondary border-t border-black sm:py-[84px]"
+    >
+      <div class="mx-auto max-w-[388px] sm:max-w-[1320px] px-[24px]">
+        <div
+          class="px-[24px] flex flex-col gap-[48px] sm:flex-row sm:gap-0 sm:justify-between sm:items-start"
+        >
+          <ul class="flex flex-col gap-[19px] uppercase leading-none">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">RETURNS</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+          <ul class="flex flex-col gap-[19px] uppercase leading-none">
+            <li><a href="#">TERMS & CONDITIONS</a></li>
+            <li><a href="#">PRIVACY POLICY</a></li>
+            <li><a href="#">COOKIE POLICY</a></li>
+            <li><a href="#">COOKIE SETTINGS</a></li>
+          </ul>
+          <ul class="flex flex-col gap-[19px] uppercase leading-none">
+            <li><a href="#">ABOUT Voodoo</a></li>
+            <li><a href="#">CAREER</a></li>
+            <li><a href="#">FACEBOOK</a></li>
+            <li><a href="#">INSTAGRAM</a></li>
+          </ul>
+          <img
+            class="max-w-[80px] self-center sm:-order-1 sm:self-auto"
+            src="./assets/images/logo.svg"
+            alt="logo image"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
