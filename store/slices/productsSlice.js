@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { PRODUCTS_PER_PAGE } from '../../constants/config';
 
 const initialState = {
   items: [],
@@ -27,7 +28,7 @@ export const getProducts = () => {
     try {
       dispatch(setLoading(true));
       const response = await axios.get(
-        'https://voodoo-sandbox.myshopify.com/products.json?limit=24',
+        `https://voodoo-sandbox.myshopify.com/products.json?limit=${PRODUCTS_PER_PAGE}`,
       );
 
       const data = response.data.products;

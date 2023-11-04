@@ -1,8 +1,6 @@
-import store from './store';
-import { getProducts } from './store/slices/productsSlice';
 const cardsContainer = document.getElementById('products-container');
 
-const renderCart = product => {
+export const renderCart = product => {
   const html = `
 	<article
 	class="font-bold flex flex-col gap-[12px] md:w-[34.1%] lg:w-[25.4%] px-[12px] mx-[-12px]"
@@ -15,8 +13,8 @@ const renderCart = product => {
 
 	<div class="flex justify-between text-sm">
 		<div>
-			<p>Product name</p>
-			<p>000 KR.</p>
+			<p>${product.title}</p>
+			<p>${product.variants[0].price} KR.</p>
 		</div>
 		<div class="text-right">
 			<p class="font-medium">Condition</p>
@@ -33,15 +31,3 @@ const renderCart = product => {
 
   cardsContainer.insertAdjacentHTML('beforeend', html);
 };
-
-store.dispatch(getProducts());
-
-store.subscribe(() => {
-  const state = store.getState();
-  const products = state.products.items;
-  console.log(state.products.items);
-
-  products.forEach(product => {
-    renderCart(product);
-  });
-});
