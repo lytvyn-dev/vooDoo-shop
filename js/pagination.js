@@ -1,6 +1,13 @@
 import { PRODUCTS_PER_PAGE, PRODUCTS_LENGTH } from '../constants/config';
+import store from '../store';
+import { getProducts } from '../store/slices/productsSlice';
+//?
+import { setSearchParams } from './searchParams';
+//? utils
+import { clearContainer } from '../utils/helpers';
 
 const paginationContainer = document.getElementById('pagination-container');
+const productsContainer = document.getElementById('products-container');
 
 let totalCount = Math.ceil(PRODUCTS_LENGTH / PRODUCTS_PER_PAGE);
 let currentPage = 1;
@@ -16,13 +23,16 @@ const renderPageNumber = page => {
     if (page === '...') return;
     currentPage = parseInt(page, 10);
     renderPagination();
+    clearContainer(productsContainer);
+    store.dispatch(getProducts(currentPage));
   });
 
   paginationContainer.insertAdjacentElement('beforeend', li);
 };
 
 export const renderPagination = () => {
-  paginationContainer.innerHTML = '';
+  clearContainer(paginationContainer);
+  setSearchParams(currentPage);
   if (totalCount <= 6) {
     for (i = 1; i <= totalCount; i++) {
       renderPageNumber(i);

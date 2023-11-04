@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
-import { PRODUCTS_PER_PAGE } from '../../constants/config';
+import { getProductsApi } from '../../api/productsApi';
 
 const initialState = {
   items: [],
@@ -13,6 +12,7 @@ const productsSlice = createSlice({
   reducers: {
     setProducts: (state, action) => {
       state.items = action.payload;
+      state.isLoading = false;
     },
     setLoading: (state, action) => {
       state.isLoading = action.payload;
@@ -23,17 +23,12 @@ const productsSlice = createSlice({
 export const { setProducts, setLoading } = productsSlice.actions;
 export const productsReducer = productsSlice.reducer;
 
-export const getProducts = () => {
+export const getProducts = (page = 1) => {
   return async dispatch => {
     try {
       dispatch(setLoading(true));
-      const response = await axios.get(
-        `https://voodoo-sandbox.myshopify.com/products.json?limit=${PRODUCTS_PER_PAGE}`,
-      );
-
-      const data = response.data.products;
+      const data = await getProductsApi(page);
       dispatch(setProducts(data));
-      dispatch(setLoading(false));
     } catch (error) {
       console.error(error);
       throw new Error('Could not get products!');
