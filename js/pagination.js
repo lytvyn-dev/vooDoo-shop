@@ -33,6 +33,7 @@ const renderPageNumber = page => {
 export const renderPagination = () => {
   clearContainer(paginationContainer);
   setSearchParams(currentPage);
+
   if (totalCount <= 6) {
     for (i = 1; i <= totalCount; i++) {
       renderPageNumber(i);

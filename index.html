@@ -31,7 +31,7 @@
           <div
             class="flex gap-[1.6rem] items-center sm:gap-[4.8rem] sm:items-start"
           >
-            <button>
+            <button id="cart-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -156,5 +156,53 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 min-w-[320px] max-w-[768px] max-h-[400px] p-[20px] bg-white text-xl space-y-8 z-[999] hidden overflow-auto"
+      id="cart-modal"
+    >
+      <div class="flex justify-between items-center">
+        <p class="font-bold text-[25px] leading-none">Cart</p>
+        <span
+          id="close-btn"
+          class="absolute top-1 right-5 text-[25px] cursor-pointer"
+          >x</span
+        >
+      </div>
+      <div id="cart-items-container" class="flex gap-8 flex-col">
+        <!-- <img src="https://via.placeholder.com/100" alt="image" />
+        <ul class="flex flex-col justify-between">
+          <li class="product-name">Product name</li>
+          <li>
+            <button
+              class="border border-black w-[30px] cursor-pointer"
+              role="decrease"
+            >
+              -
+            </button>
+            1
+            <button
+              class="border border-black w-[30px] cursor-pointer"
+              role="increase"
+            >
+              +
+            </button>
+          </li>
+          <li>$1 999</li>
+        </ul> -->
+      </div>
+      <div id="cart-footer" class="flex justify-between">
+        <a
+          class="text-white bg-black inline-block text-[1.2rem] font-bold p-[12px] rounded-[4px] leading-none sm:text-[2rem]"
+          href="#"
+          >Checkout</a
+        >
+      </div>
+    </div>
+
+    <div
+      id="backdrop"
+      class="fixed top-0 left-0 w-full h-screen bg-black/30 hidden"
+    ></div>
   </body>
 </html>
