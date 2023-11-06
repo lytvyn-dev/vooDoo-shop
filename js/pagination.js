@@ -25,6 +25,7 @@ const renderPageNumber = page => {
     renderPagination();
     clearContainer(productsContainer);
     store.dispatch(getProducts(currentPage));
+    window.scrollTo(0, 0);
   });
 
   paginationContainer.insertAdjacentElement('beforeend', li);
