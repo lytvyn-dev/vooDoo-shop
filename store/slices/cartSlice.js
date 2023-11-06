@@ -53,7 +53,6 @@ const cartSlice = createSlice({
       }
     },
     removeItem: (state, action) => {
-      console.log(action);
       removeFromCart(state, action.payload);
     },
   },
