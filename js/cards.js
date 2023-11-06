@@ -1,6 +1,7 @@
 import store from '../store';
 import { cartActions } from '../store/slices/cartSlice';
 const cardsContainer = document.getElementById('products-container');
+//? utils
 import { clearContainer } from '../utils/helpers';
 
 const handleAddToCart = product => {
@@ -14,7 +15,7 @@ export const renderCard = product => {
     >
 
   <figure class="border border-black rounded min-h-[300px] relative">
-    <span style="top: 12px; left: 12px" class="absolute bottom-0 left-0 transform -translate-x-1/2 -translate-y-1/2 uppercase rounded bg-black text-white p-[8px] text-[1.2rem] leading-none ">
+    <span style="top: 24px; left: 32px" class="absolute bottom-0 left-0 transform -translate-x-1/2 -translate-y-1/2 uppercase rounded bg-black text-white p-[8px] text-[1.2rem] leading-none ">
       used
     </span>
   </figure>
