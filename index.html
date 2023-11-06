@@ -9,28 +9,28 @@
     <script defer type="module" src="./js/customElements/collapse.js"></script>
   </head>
 
-  <body class="flex flex-col min-h-screen bg-light font-main">
+  <body class="flex min-h-screen flex-col bg-light font-main">
     <!-- !Header -->
-    <header class="py-[24px] border-b border-black sm:py-[48px]">
-      <div class="mx-auto max-w-[388px] sm:max-w-[1320px] px-[24px]">
+    <header class="border-b border-black py-[24px] sm:py-[48px]">
+      <div class="mx-auto max-w-[388px] px-[24px] sm:max-w-[1320px]">
         <div class="flex justify-between">
           <div
-            class="flex grow gap-[4px] items-start sm:gap-[12px] sm:relative"
+            class="flex grow items-start gap-[4px] sm:relative sm:gap-[12px]"
           >
             <img
-              class="max-w-[23px] sm:max-w-[45px] xl:absolute xl:top-0 xl:left-[-60px]"
+              class="max-w-[23px] sm:max-w-[45px] xl:absolute xl:left-[-60px] xl:top-0"
               src="./assets/images/logo.svg"
               alt="logo image"
             />
             <img
-              class="max-w-[107px] sm:max-w-[192px] sm:h-[98px]"
+              class="max-w-[107px] sm:h-[98px] sm:max-w-[192px]"
               src="./assets/images/logo-text.svg"
               alt="logo image"
             />
           </div>
 
           <div
-            class="flex gap-[1.6rem] items-center sm:gap-[4.8rem] sm:items-start"
+            class="flex items-center gap-[1.6rem] sm:items-start sm:gap-[4.8rem]"
           >
             <button id="cart-button">
               <svg
@@ -61,7 +61,7 @@
               </svg>
             </button>
             <a
-              class="text-white bg-black inline-block text-[1.2rem] font-bold p-[12px] rounded-[4px] leading-none sm:text-[2rem]"
+              class="inline-block rounded-[4px] bg-black p-[12px] text-[1.2rem] font-bold leading-none text-white sm:text-[2rem]"
               href="#"
               >Sign-up</a
             >
@@ -73,7 +73,7 @@
     <!-- !Main -->
     <main class="grow pt-[24px] md:pt-[100px]">
       <div
-        class="mx-auto max-w-[388px] md:max-w-[1320px] px-[24px] pb-[204px] space-y-[60px] md:space-y-[70px]"
+        class="mx-auto max-w-[388px] space-y-[60px] px-[24px] pb-[204px] md:max-w-[1320px] md:space-y-[70px]"
       >
         <div class="space-y-[50px]">
           <!-- !Custom element -->
@@ -90,7 +90,7 @@
 
           <div
             id="products-container"
-            class="flex gap-y-[48px] flex-col md:flex-row md:flex-wrap md:gap-x-[24px]"
+            class="flex flex-col gap-y-[48px] md:flex-row md:flex-wrap md:gap-x-[24px]"
           >
             <!-- <article
               class="font-bold flex flex-col gap-[12px] md:w-[34.1%] lg:w-[25.4%] px-[12px] mx-[-12px]"
@@ -124,7 +124,7 @@
         </div>
         <ul
           id="pagination-container"
-          class="flex text-xl gap-[10px] font-pagination font-light justify-center"
+          class="flex justify-center gap-[10px] font-pagination text-xl font-light"
         >
           <!-- <li
             class="w-[39px] h-[39px] flex justify-center items-center active:text-white text-black border border-black active:bg-black rounded-full cursor-pointer"
@@ -137,11 +137,11 @@
 
     <!-- !Footer -->
     <footer
-      class="bg-white py-[48px] text-sm font-bold font-secondary border-t border-black sm:py-[84px]"
+      class="border-t border-black bg-white py-[48px] font-secondary text-sm font-bold sm:py-[84px]"
     >
-      <div class="mx-auto max-w-[388px] sm:max-w-[1320px] px-[24px]">
+      <div class="mx-auto max-w-[388px] px-[24px] sm:max-w-[1320px]">
         <div
-          class="px-[24px] flex flex-col gap-[48px] sm:flex-row sm:gap-0 sm:justify-between sm:items-start"
+          class="flex flex-col gap-[48px] px-[24px] sm:flex-row sm:items-start sm:justify-between sm:gap-0"
         >
           <ul class="flex flex-col gap-[19px] uppercase leading-none">
             <li><a href="#">FAQ</a></li>
@@ -170,18 +170,18 @@
     </footer>
 
     <div
-      class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 min-w-[320px] max-w-[768px] max-h-[400px] p-[20px] bg-white text-xl space-y-8 z-[999] hidden overflow-auto"
+      class="fixed left-1/2 top-1/2 z-[999] hidden max-h-[400px] w-1/2 min-w-[320px] max-w-[768px] -translate-x-1/2 -translate-y-1/2 transform space-y-8 overflow-auto bg-white p-[20px] text-xl"
       id="cart-modal"
     >
-      <div class="flex justify-between items-center">
-        <p class="font-bold text-[25px] leading-none">Cart</p>
+      <div class="flex items-center justify-between border-b pb-[22px]">
+        <p class="text-[25px] font-bold leading-none">Shopping Cart</p>
         <span
           id="close-btn"
-          class="absolute top-1 right-5 text-[25px] cursor-pointer"
+          class="absolute right-5 top-1 cursor-pointer text-[25px]"
           >x</span
         >
       </div>
-      <div id="cart-items-container" class="flex gap-8 flex-col">
+      <div id="cart-items-container" class="flex flex-col gap-8">
         <!-- <img src="https://via.placeholder.com/100" alt="image" />
         <ul class="flex flex-col justify-between">
           <li class="product-name">Product name</li>
@@ -203,18 +203,15 @@
           <li>$1 999</li>
         </ul> -->
       </div>
-      <div id="cart-footer" class="flex justify-between">
-        <a
-          class="text-white bg-black inline-block text-[1.2rem] font-bold p-[12px] rounded-[4px] leading-none sm:text-[2rem]"
-          href="#"
-          >Checkout</a
-        >
-      </div>
+      <div
+        id="cart-footer"
+        class="flex justify-between text-sm font-bold"
+      ></div>
     </div>
 
     <div
       id="backdrop"
-      class="fixed top-0 left-0 w-full h-screen bg-black/30 hidden"
+      class="fixed left-0 top-0 hidden h-screen w-full bg-black/30"
     ></div>
   </body>
 </html>

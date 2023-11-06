@@ -5,6 +5,17 @@ const initialState = {
   totalPrice: 0,
 };
 
+const removeFromCart = (state, itemToDecrease) => {
+  const { id } = itemToDecrease;
+  const itemIndex = state.items.findIndex(item => item.id === id);
+
+  if (itemIndex !== -1) {
+    const removedItem = state.items.splice(itemIndex, 1)[0];
+    state.totalPrice -=
+      parseFloat(removedItem.variants[0].price) * removedItem.quantity;
+  }
+};
+
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
@@ -38,14 +49,12 @@ const cartSlice = createSlice({
         itemToDecrease.quantity--;
         state.totalPrice -= parseFloat(itemToDecrease.variants[0].price);
       } else if (itemToDecrease && itemToDecrease.quantity === 1) {
-        const itemIndex = state.items.findIndex(item => item.id === id);
-
-        if (itemIndex !== -1) {
-          const removedItem = state.items.splice(itemIndex, 1)[0];
-          state.totalPrice -=
-            parseFloat(removedItem.variants[0].price) * removedItem.quantity;
-        }
+        removeFromCart(state, itemToDecrease);
       }
+    },
+    removeItem: (state, action) => {
+      console.log(action);
+      removeFromCart(state, action.payload);
     },
   },
 });

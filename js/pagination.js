@@ -2,7 +2,7 @@ import { PRODUCTS_PER_PAGE, PRODUCTS_LENGTH } from '../constants/config';
 import store from '../store';
 import { getProducts } from '../store/slices/productsSlice';
 //?
-import { setSearchParams } from './searchParams';
+import { setSearchParams } from '../utils/helpers';
 //? utils
 import { clearContainer } from '../utils/helpers';
 
